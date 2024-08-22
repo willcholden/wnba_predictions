@@ -1,0 +1,25 @@
+Thu, Aug 22, 2024
+NYL>DAL Δ16.0 (Lin, r2=0.305)
+NYL>DAL Δ15.1 (Rid, r2=0.308)
+NYL>DAL Δ15.6 (Las, r2=0.311)
+***
+Fri, Aug 23, 2024
+ATL>PHO Δ0.2 (Lin, r2=0.305)
+PHO>ATL Δ1.3 (Rid, r2=0.308)
+PHO>ATL Δ0.6 (Las, r2=0.311)
+***
+Fri, Aug 23, 2024
+CON>CHI Δ7.0 (Lin, r2=0.305)
+CON>CHI Δ6.9 (Rid, r2=0.308)
+CON>CHI Δ6.7 (Las, r2=0.311)
+***
+Fri, Aug 23, 2024
+MIN>LVA Δ1.0 (Lin, r2=0.305)
+MIN>LVA Δ1.4 (Rid, r2=0.308)
+MIN>LVA Δ1.8 (Las, r2=0.311)
+***
+Fri, Aug 23, 2024
+LAS>WAS Δ0.3 (Lin, r2=0.305)
+WAS>LAS Δ0.8 (Rid, r2=0.308)
+WAS>LAS Δ0.8 (Las, r2=0.311)
+***
