@@ -1,25 +1,25 @@
 Thu, Aug 22, 2024
-NYL>DAL Δ16.2 (Lin, r2=0.289)
-NYL>DAL Δ14.2 (Rid, r2=0.297)
-NYL>DAL Δ14.6 (Las, r2=0.298)
+NYL>DAL Δ17.7 (Lin, r2=0.242)
+NYL>DAL Δ16.1 (Rid, r2=0.254)
+NYL>DAL Δ16.7 (Las, r2=0.254)
 ***
 Fri, Aug 23, 2024
-PHO>ATL Δ0.3 (Lin, r2=0.289)
-PHO>ATL Δ1.1 (Rid, r2=0.297)
-PHO>ATL Δ0.6 (Las, r2=0.298)
+PHO>ATL Δ0.6 (Lin, r2=0.242)
+PHO>ATL Δ1.2 (Rid, r2=0.254)
+PHO>ATL Δ0.7 (Las, r2=0.254)
 ***
 Fri, Aug 23, 2024
-CON>CHI Δ6.0 (Lin, r2=0.289)
-CON>CHI Δ5.4 (Rid, r2=0.297)
-CON>CHI Δ5.3 (Las, r2=0.298)
+CON>CHI Δ7.9 (Lin, r2=0.242)
+CON>CHI Δ7.2 (Rid, r2=0.254)
+CON>CHI Δ7.2 (Las, r2=0.254)
 ***
 Fri, Aug 23, 2024
-MIN>LVA Δ0.5 (Lin, r2=0.289)
-MIN>LVA Δ1.7 (Rid, r2=0.297)
-MIN>LVA Δ2.0 (Las, r2=0.298)
+MIN>LVA Δ4.4 (Lin, r2=0.242)
+MIN>LVA Δ3.1 (Rid, r2=0.254)
+MIN>LVA Δ3.6 (Las, r2=0.254)
 ***
 Fri, Aug 23, 2024
-LAS>WAS Δ1.5 (Lin, r2=0.289)
-WAS>LAS Δ0.9 (Rid, r2=0.297)
-WAS>LAS Δ0.8 (Las, r2=0.298)
+LAS>WAS Δ0.3 (Lin, r2=0.242)
+WAS>LAS Δ1.3 (Rid, r2=0.254)
+WAS>LAS Δ1.3 (Las, r2=0.254)
 ***

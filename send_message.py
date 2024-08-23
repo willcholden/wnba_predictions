@@ -7,7 +7,7 @@ app_password = 'pgxu jkip gmql pthr'  # Use the app password generated from Goog
 recipient_number = '6177773869'
 carrier_gateway = 'vtext.com'  # Replace with the carrier's SMS gateway domain
 
-with open("message_body.txt") as f:
+with open("/home/pi/wnba_predictions/message_body.txt") as f:
     msg_body = f.read()
 
 games = msg_body.split("***")

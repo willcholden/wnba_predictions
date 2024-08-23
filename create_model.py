@@ -12,7 +12,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # %%
-df = pd.read_csv('matchup_stats.csv')
+df = pd.read_csv('/home/pi/wnba_predictions/matchup_stats.csv')
 prev_matchups = df[df['pts_d'] != 0]
 
 column_names = df.columns.values[2:24]
@@ -91,7 +91,7 @@ s = '-'*50
 today_dt=datetime.today() - timedelta(days=1)
 today = today_dt.strftime("%a, %b %d, %Y")
 
-with open('message_body.txt', 'w') as the_file:
+with open('/home/pi/wnba_predictions/message_body.txt', 'w') as the_file:
     for _ in range(0, 2):
         today_dt += timedelta(days=1)
         today = today_dt.strftime("%a, %b %d, %Y")

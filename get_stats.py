@@ -58,7 +58,7 @@ teams = pd.DataFrame(data=stats[1:],
                   columns=column_names)
 
 teams['team'] = team_list
-teams.to_csv('./team_stats.csv')
+teams.to_csv('/home/pi/wnba_predictions/team_stats.csv')
 
 # %%
 
@@ -173,7 +173,7 @@ df['team_a'] = team_a_list
 df['team_b'] = team_b_list
 df.head(30)
 
-df.to_csv('./matchup_stats.csv')
+df.to_csv('/home/pi/wnba_predictions/matchup_stats.csv')
 
 
 # %%
