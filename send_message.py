@@ -15,7 +15,7 @@ games = msg_body.split("***")
 
 
 for game in games:
-    if game != " ":
+    if len(game) > 2:
         server = smtplib.SMTP('smtp.gmail.com', '587')
         server.starttls()
         server.login(sender_email, app_password)
