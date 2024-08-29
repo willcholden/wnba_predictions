@@ -15,16 +15,17 @@ games = msg_body.split("***")
 
 
 for game in games:
-    server = smtplib.SMTP('smtp.gmail.com', '587')
-    server.starttls()
-    server.login(sender_email, app_password)
+    if game != " ":
+        server = smtplib.SMTP('smtp.gmail.com', '587')
+        server.starttls()
+        server.login(sender_email, app_password)
 
-    msg = MIMEText(game)
-    msg['From'] = sender_email
-    msg['To'] = f"{recipient_number}@{carrier_gateway}"
+        msg = MIMEText(game)
+        msg['From'] = sender_email
+        msg['To'] = f"{recipient_number}@{carrier_gateway}"
 
-    server.sendmail(sender_email, [msg['To']], msg.as_string())
+        server.sendmail(sender_email, [msg['To']], msg.as_string())
 
-    print("Message sent!")
-    server.quit()
-    time.sleep(65)
+        print("Message sent!")
+        server.quit()
+        time.sleep(65)

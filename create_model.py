@@ -20,6 +20,12 @@ column_names = df.columns.values[2:24]
 y = prev_matchups['pts_d'].to_numpy()
 X = prev_matchups.to_numpy()[:,2:24]
 
+# X_sq = np.square(np.abs(X)) * np.sign(X)
+# X_rt = np.sqrt(np.abs(X).astype(float)) * np.sign(X)
+
+
+# X_tot = np.hstack((X, X_sq, X_rt))
+
 
 # %%
 scaler = StandardScaler() 
@@ -79,9 +85,9 @@ lin_score = lin.score(X_test, y_test)
 # %%
 def isWin(team_a, team_b, pts_d):
     if pts_d > 0:
-        outp = team_a + ">" + team_b + " Δ" + str(round(pts_d, 1))
+        outp = team_a + ">" + team_b + " | " + str(round(pts_d, 1))
     else:
-        outp = team_b + ">" + team_a + " Δ" + str(round(abs(pts_d), 1))
+        outp = team_b + ">" + team_a + " | " + str(round(abs(pts_d), 1))
     return(outp)
 
 # %%
