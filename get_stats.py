@@ -1,4 +1,5 @@
-# %%
+#!/usr/bin/env python3
+
 import requests
 import re
 import numpy as np
@@ -25,8 +26,9 @@ for year in years:
                 
             else:
                 print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
-                if response.status_code == '429':
-                    time.sleep(3605)
+                #if response.status_code == '429':
+                retry_after = response.headers.get("Retry-After")
+                print(f"Retry after {retry_after} seconds")
                 response = requests.get(url, proxies={'http': None, 'https': None})
                 html_content = response.text
 
@@ -122,6 +124,8 @@ for year in years:
         team_b_pts = float(team_b_pts)
 
         date = game[game.find("date_game")+31:game.find("date_game")+48]
+        if date[16] == '<':
+            date = date[0:16]
 
         team_a_list.append(team_a)
         team_b_list.append(team_b)

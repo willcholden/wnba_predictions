@@ -20,16 +20,11 @@ column_names = df.columns.values[2:24]
 y = prev_matchups['pts_d'].to_numpy()
 X = prev_matchups.to_numpy()[:,2:24]
 
-# X_sq = np.square(np.abs(X)) * np.sign(X)
-# X_rt = np.sqrt(np.abs(X).astype(float)) * np.sign(X)
-
-
-# X_tot = np.hstack((X, X_sq, X_rt))
-
 
 # %%
 scaler = StandardScaler() 
 scaled_X = scaler.fit_transform(X) 
+
   
 X_train, X_test, y_train, y_test = train_test_split(scaled_X, 
                                                     y, 
@@ -100,7 +95,7 @@ today = today_dt.strftime("%a, %b %d, %Y")
 with open('/home/pi/wnba_predictions/message_body.txt', 'w') as the_file:
     for _ in range(0, 2):
         today_dt += timedelta(days=1)
-        today = today_dt.strftime("%a, %b %d, %Y")
+        today = today_dt.strftime("%a, %b %-d, %Y")
         today_header = today + "\n"
         home_teams=df[df['date']==today]['team_a'].to_list()
         visitor_teams=df[df['date']==today]['team_b'].to_list()
@@ -110,6 +105,7 @@ with open('/home/pi/wnba_predictions/message_body.txt', 'w') as the_file:
 
         try:
             X_today=df[df['date']==today].drop(['pts_d', 'mp_per_g', 'date', 'team_a', 'team_b'], axis=1).to_numpy()[:,1:]
+            print(today)
             X_today_scaled = scaler.transform(X_today)
 
             for j in range(0, len(home_teams)):
