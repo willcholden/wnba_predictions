@@ -1,7 +1,11 @@
 # WNBA Score Predictor
 ### By William C Holden
 
-The objective of this project was to create a fully automated system that could provide real-time, accurate predictions about the outcomes of WNBA games. This system comprises five separate steps: Web scraping to get WNBA stats, training machine learning models using the stats, making predictions on upcoming games, sending these predictions to my phone for convenience, and automation. Each of the five steps are explained below-
+## Introduction
+
+The objective of this project was to create a fully automated system that could provide real-time, accurate predictions about the outcomes of WNBA games. This system comprises five separate steps: Web scraping to get WNBA stats, training machine learning models using the stats, making predictions on upcoming games, sending these predictions to my phone for convenience, and automating steps 1-4. Each of the five steps will be explained below. 
+
+As an avid WNBA fan, this project was a blast to complete despite its many challenges. I enjoyed taking the data science techniques I gathered in academic and professional settings and applying them to one of my personal interests. Watching the games has an added layer of tension/excitement when I'm hoping my predictions come true. I hope others can look at this repository and be inspired to find the data science project hidden in their passions. 
 
 ## Step 1: Web Scraping
 
@@ -23,10 +27,15 @@ If the search shows that there are any games being played soon, the stats from t
 
 For convenience, I wanted the predictions for each upcoming match to be sent directly from my machine to my cellphone. This can be accomplished using the SMTP protocol client[^4] as seen in my script `send_message.py`. This library allows a user to send mail to any machine connected to the internet. In the case of this project, I sent messages through an email gateway connected to my phone so that I could get text updates. Reading the text file `message_body.txt`, the message sending program will send one text per game which includes the date of the game, the two competing teams, and the predicted score from all three regression models, as well as each model's R2 score. A screenshot from my text bot can be seen below: 
 
-![text example](https://github.com/willcholden/wnba_predictions/blob/main/text_example.png)
+![text example](https://github.com/willcholden/wnba_predictions/blob/main/text_example.PNG)
 
+## Step 5: Automation
 
+![raspberry pi](https://github.com/willcholden/wnba_predictions/blob/main/raspberry_pi.png)
 
+It would be a hassle to boot up my computer each morning and run all these scripts one by one. To avoid this, I figured out a way to automate the process using a Raspberry Pi 4[^5]. The Raspberry Pi is a simple computer that draws very little power- the average power consumption while idle is 4W. For comparison, the average low-power LED light bulb draws 10W of power. Once I cloned all of my python scripts to the Pi, I created a cron[^6] job to schedule the scripts to run each morning. Finally, I wrote a shell script to ensure that the Pi is connected to the internet, `check_wifi.sh`, or else the system would fail to scrape the web and send messages via SMTP. 
+
+![cron job](https://github.com/willcholden/wnba_predictions/blob/main/cron_job.png)
 
 
 
@@ -36,3 +45,5 @@ For convenience, I wanted the predictions for each upcoming match to be sent dir
 [^2]: https://scikit-learn.org/stable/modules/linear_model.html
 [^3]: https://docs.python.org/3/library/datetime.html
 [^4]: https://docs.python.org/3/library/smtplib.html
+[^5]: https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
+[^6]: https://www.redhat.com/sysadmin/linux-cron-command

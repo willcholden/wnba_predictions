@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 import time 
 
 sender_email = 'willholden9@gmail.com'
-app_password = 'pgxu jkip gmql pthr'  # Use the app password generated from Google
+app_password = 'classified'  # Use the app password generated from Google
 recipient_number = '6177773869'
 carrier_gateway = 'vtext.com'  # Replace with the carrier's SMS gateway domain
 
