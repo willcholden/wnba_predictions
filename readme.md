@@ -31,7 +31,7 @@ For convenience, I wanted the predictions for each upcoming match to be sent dir
 
 ## Step 5: Automation
 
-![raspberry pi](https://github.com/willcholden/wnba_predictions/blob/main/raspberry_pi.HEIC)
+![raspberry pi](https://github.com/willcholden/wnba_predictions/blob/main/raspberry_pi.png)
 
 It would be a hassle to boot up my computer each morning and run all these scripts one by one. To avoid this, I figured out a way to automate the process using a Raspberry Pi 4[^5]. The Raspberry Pi is a simple computer that draws very little power- the average power consumption while idle is 4W. For comparison, the average low-power LED light bulb draws 10W of power. Once I cloned all of my python scripts to the Pi, I created a cron[^6] job to schedule the scripts to run each morning. Finally, I wrote a shell script to ensure that the Pi is connected to the internet, `check_wifi.sh`, or else the system would fail to scrape the web and send messages via SMTP. 
 
